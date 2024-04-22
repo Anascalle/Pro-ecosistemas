@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensajes Doctor</title>
+</head>
+<body>
+
+    <style>
+        .filtro{
+    display: none;
+}
+    </style>
+
+    <h1>Fármacos</h1>
+    <input id="buscaMedicina" type="search">
+    <div id="contendorCards">
+        <p class="card">Help</p>
+        <p class="card">Me</p>
+        <p class="card">Please</p>
+        <button class="card">Dolex</button>
+        <button class="card">Acetaminofen</button>
+        <button class="card">Loratadina</button>
+        <button class="card">Vaporub</button>
+    </div>
+
+    <script src="../../index.js"></script>
+    <script>
+        document.addEventListener("keyup", e => {
+            if (e.target.matches('#buscaMedicina')){
+                document.querySelectorAll('.card').forEach(medicine => {
+                    medicine.textContent.toLowerCase().includes(e.target.value.toLowerCase())
+                    ?medicine.classList.remove('filtro')
+                    :medicine.classList.add('filtro')
+                })
+            }
+        })
+    </script>
+</body>
+</html>

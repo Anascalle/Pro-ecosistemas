@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recibidor Paciente</title>
+</head>
+<body>
+    <h1>Esta es la sesion del paciente</h1>
+    <button type="submit" id="historial">Historial de formulas</button>
+    <button type="submit" id="Estado">Estado de formulas</button>
+ 
+    
+    <script src="../../index.js"></script>
+   <script>
+       document.getElementById('historial').addEventListener('click', function() {
+        window.location.href = '/historial';})
+
+        document.getElementById('Estado').addEventListener('click', function() {
+        window.location.href = '/estado';})
+   </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio Sesión</title>
+</head>
+<body>
+    <h1>Iniciar Sesión</h1>
+    <form action="/iniciar-sesion" method="POST">
+        <label for="rol">Selecciona tu tipo de usuario:</label>
+        <select id="rol" name="rol" required>
+            <option value="">Seleccione un tipo de usuario</option>
+            <option value="usuario1">Paciente</option>
+            <option value="usuario2">Doctor</option>
+            <option value="usuario3">Farmacia</option>
+        </select>
+
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre de usuario" required>
+        <input type="password" name="contraseña" placeholder="Contraseña" required>
+        <button type="submit">Iniciar Sesión</button>
+        <p>¿No tienes cuenta? <a href="/registro">Regístrate</a></p>
+    </form>
+    <script src="../../index.js"></script>
+
+</body>
+</html>
